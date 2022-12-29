@@ -203,8 +203,6 @@ li:hover {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 .card {
-    /* flex: 1;
-    min-width: 300px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
