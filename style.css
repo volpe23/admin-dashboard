@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    min-height: 100vh;
+}
+.container {
+    /* min-height: 100vh; */
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    height: auto;
+
+    grid-template-areas: 
+        "sidebar    header"
+        "sidebar    content"
+       
+        ;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    gap: 40px;
+    background-color: blue;
+}
+ul {
+    list-style: none;
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    row-gap: 15px;
+    align-items: center;
+    grid-template-areas: 
+        "searchfield    profile"
+        "welcome        option-nav";
+        padding: 25px 40px;
+}
+
+.searchfield {
+    grid-area: searchfield;
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-wrap: nowrap;
+    align-content: center;
+}
+.searchfield > i {
+    margin-right: 10px;
+}
+.welcome {
+    grid-area: welcome;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+.profile {
+    grid-area: profile;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+}
+.profile-image {
+    /* scale: 0.25; */
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.option-nav {
+    grid-area: option-nav;
+}
+
+.welcome-image {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-areas: 
+        "projects announce"
+        "projects trending"
+    ;
+    row-gap: 25px;
+    column-gap: 10px;
+
+}
+.projects {
+    grid-area: projects;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+    /* min-width: 200px; */
+    border: 1px solid black;
+
+}
+
+.announce {
+    border: 1px solid black;
+}
+
+.trending {
+    border: 1px solid black;
+}
